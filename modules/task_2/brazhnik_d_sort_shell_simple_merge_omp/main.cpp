@@ -1,7 +1,7 @@
 // Copyright 2022 Brazhnik Dmitry
 
 #include <gtest/gtest.h>
-#include "../../../modules/task_2/brazhnik_d_sort_shell_simple_merge_omp/short_shell.h"
+#include "../../../modules/task_2/brazhnik_d_sort_shell_simple_merge_omp/short_shell_omp.h"
 
 TEST(Sort_Shell_Omp, Test_1_Random_Shell) {
   std::vector<int> vec = getRandom(10);
@@ -102,79 +102,6 @@ TEST(Sort_Shell_Omp, Test_8_Random_Merge) {
   std::sort(vec.begin(), vec.end());
   ASSERT_EQ(vec, res);
 }
-
-/*TEST(Sort_Shell_Omp, Test_9_Random_Merge_10000) {
-  const int size = 10000;
-  const int thread_count = 4;
-  std::vector<int> vec = getRandom(size);
-  double t1, t2, dt1;
-  t1 = omp_get_wtime();
-  std::vector<int> res1 = Shell_with_merge_omp(vec, thread_count, size);
-  t2 = omp_get_wtime();
-  dt1 = t2 - t1;
-  double t3, t4, dt2;
-  t3 = omp_get_wtime();
-  std::vector<int> res2 = Shell_with_merge(vec, thread_count, size);
-  t4 = omp_get_wtime();
-  dt2 = t4 - t3;
-  std::cout << "time of seq = " << dt1 << std::endl;
-  std::cout << "time of omp = " << dt2 << std::endl;
-  ASSERT_EQ(res1, res2);
-}
-TEST(Sort_Shell_Omp, Test_10_Random_Merge_10000003) {
-  const int size = 1000003;
-  const int thread_count = 4;
-  std::vector<int> vec = getRandom(size);
-  double t1, t2, dt1;
-  t1 = omp_get_wtime();
-  std::vector<int> res1 = Shell_with_merge_omp(vec, thread_count, size);
-  t2 = omp_get_wtime();
-  dt1 = t2 - t1;
-  double t3, t4, dt2;
-  t3 = omp_get_wtime();
-  std::vector<int> res2 = Shell_with_merge(vec, thread_count, size);
-  t4 = omp_get_wtime();
-  dt2 = t4 - t3;
-  std::cout << "time of seq = " << dt2 << std::endl;
-  std::cout << "time of omp = " << dt1 << std::endl;
-  ASSERT_EQ(res1, res2);
-}
-TEST(Sort_Shell_Omp, Test_11_Random_Merge_10000002) {
-  const int size = 10000002;
-  const int thread_count = 4;
-  std::vector<int> vec = getRandom(size);
-  double t1, t2, dt1;
-  t1 = omp_get_wtime();
-  std::vector<int> res1 = Shell_with_merge_omp(vec, thread_count, size);
-  t2 = omp_get_wtime();
-  dt1 = t2 - t1;
-  double t3, t4, dt2;
-  t3 = omp_get_wtime();
-  std::vector<int> res2 = Shell_with_merge(vec, thread_count, size);
-  t4 = omp_get_wtime();
-  dt2 = t4 - t3;
-  std::cout << "time of seq = " << dt2 << std::endl;
-  std::cout << "time of omp = " << dt1 << std::endl;
-  ASSERT_EQ(res1, res2);
-}
-TEST(Sort_Shell_Omp, Test_12_Random_Merge_10000002_2) {
-  const int size = 10000002;
-  const int thread_count = 2;
-  std::vector<int> vec = getRandom(size);
-  double t1, t2, dt1;
-  t1 = omp_get_wtime();
-  std::vector<int> res1 = Shell_with_merge_omp(vec, thread_count, size);
-  t2 = omp_get_wtime();
-  dt1 = t2 - t1;
-  double t3, t4, dt2;
-  t3 = omp_get_wtime();
-  std::vector<int> res2 = Shell_with_merge(vec, thread_count, size);
-  t4 = omp_get_wtime();
-  dt2 = t4 - t3;
-  std::cout << "time of seq = " << dt2 << std::endl;
-  std::cout << "time of omp = " << dt1 << std::endl;
-  ASSERT_EQ(res1, res2);
-}*/
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

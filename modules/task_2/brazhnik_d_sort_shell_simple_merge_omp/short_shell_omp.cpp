@@ -1,6 +1,6 @@
 // Copyright 2022 Brazhnik Dmitry
 
-#include "../../../modules/task_2/brazhnik_d_sort_shell_simple_merge_omp/short_shell.h"
+#include "../../../modules/task_2/brazhnik_d_sort_shell_simple_merge_omp/short_shell_omp.h"
 #include <omp.h>
 #include <vector>
 #include <utility>
