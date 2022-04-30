@@ -1,7 +1,7 @@
 // Copyright 2022 Brazhnik Dmitry
 
 #include <gtest/gtest.h>
-#include "../../../modules/task_1/brazhnik_d_sort_shell_simple_merge/short_shell.h"
+#include "../../../modules/task_2/brazhnik_d_sort_shell_simple_merge_omp/short_shell.h"
 
 TEST(Sort_Shell_Omp, Test_1_Random_Shell) {
   std::vector<int> vec = getRandom(10);

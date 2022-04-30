@@ -1,6 +1,6 @@
 // Copyright 2022 Brazhnik Dmitry
 
-#include "../../../modules/task_1/brazhnik_d_sort_shell_simple_merge/short_shell.h"
+#include "../../../modules/task_2/brazhnik_d_sort_shell_simple_merge_omp/short_shell.h"
 #include <omp.h>
 #include <vector>
 #include <utility>
@@ -117,7 +117,8 @@ std::vector<int> Shell_with_merge_omp(const std::vector<int>& a, int n, int size
 
   std::vector<std::vector<int>> vec = division(a, n);
 
-  #pragma omp parallel shared(vec) {
+  #pragma omp parallel shared(vec) 
+  {
   #pragma omp for
       for (int i = 0; i <static_cast<int> (vec.size()); i++) {
         vec[i] = SortShell(vec[i], vec[i].size());
