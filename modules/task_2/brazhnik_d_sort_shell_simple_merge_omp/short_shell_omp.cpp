@@ -118,7 +118,7 @@ std::vector<int> Shell_with_merge_omp(const std::vector<int>& a, int n, int size
 
   std::vector<std::vector<int>> vec = division(a, n);
 
-  #pragma omp parallel shared(vec) 
+  #pragma omp parallel shared(vec)
   {
   #pragma omp for
       for (int i = 0; i <static_cast<int> (vec.size()); i++) {
