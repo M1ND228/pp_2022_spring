@@ -94,6 +94,7 @@ std::vector<int> Merge_of_two_vectors(const std::vector<int>& a, const std::vect
       break;
     }
   }
+
   return res;
   }
 
