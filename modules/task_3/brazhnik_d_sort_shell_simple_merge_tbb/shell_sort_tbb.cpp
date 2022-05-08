@@ -1,14 +1,6 @@
 // Copyright 2022 Brazhnik Dmitry
 
 #include "../../../modules/task_3/brazhnik_d_sort_shell_simple_merge_tbb/shell_sort_tbb.h"
-#include <tbb/tbb.h>
-#include <vector>
-#include <utility>
-#include <algorithm>
-#include <iostream>
-#include <random>
-#include <ctime>
-
 
 std::vector<int> getRandom(int N, int seed) {
     std::mt19937 gen;

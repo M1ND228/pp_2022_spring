@@ -3,8 +3,15 @@
 #ifndef MODULES_TASK_3_BRAZHNIK_D_SORT_SHELL_SIMPLE_MERGE_TBB_SHELL_SORT_TBB_H_
 #define MODULES_TASK_3_BRAZHNIK_D_SORT_SHELL_SIMPLE_MERGE_TBB_SHELL_SORT_TBB_H_
 
-#include <utility>
+#include <tbb/tbb.h>
 #include <vector>
+#include <utility>
+#include <algorithm>
+#include <iostream>
+#include <random>
+#include <ctime>
+#include <numeric>
+#include <string>
 
 std::vector<int> getRandom(int N, int seed = 0);
 std::vector<int> SortShell(const std::vector<int>& a, int size);
