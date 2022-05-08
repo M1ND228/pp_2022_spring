@@ -10,8 +10,7 @@
 #include <ctime>
 
 
-std::vector<int> getRandom(int N, int seed)
-{
+std::vector<int> getRandom(int N, int seed) {
     std::mt19937 gen;
     gen.seed(static_cast<unsigned int>(seed));
 
@@ -24,8 +23,7 @@ std::vector<int> getRandom(int N, int seed)
     return v;
 }
 
-std::vector<int> SortShell(const std::vector<int>& a, int size)
-{
+std::vector<int> SortShell(const std::vector<int>& a, int size) {
     std::vector<int> m(a);
 
     for (int step = size / 2; step > 0; step /= 2) {
@@ -39,8 +37,7 @@ std::vector<int> SortShell(const std::vector<int>& a, int size)
     return m;
 }
 
-std::vector<std::vector<int>> division(const std::vector<int>& a, unsigned int n)
-{
+std::vector<std::vector<int>> division(const std::vector<int>& a, unsigned int n) {
     std::vector<std::vector<int>> res;
     std::vector<int> v;
     std::vector<int> s(a);
@@ -60,8 +57,7 @@ std::vector<std::vector<int>> division(const std::vector<int>& a, unsigned int n
     return res;
 }
 
-std::vector<int> Merge(const std::vector<std::vector<int>>& a, int n, int size)
-{
+std::vector<int> Merge(const std::vector<std::vector<int>>& a, int n, int size) {
     std::vector<int> res = a[0];
 
     for (int i = 1; i < n; i++) {
@@ -70,8 +66,7 @@ std::vector<int> Merge(const std::vector<std::vector<int>>& a, int n, int size)
     return res;
 }
 
-std::vector<int> Merge_of_two_vectors(const std::vector<int>& a, const std::vector<int>& b)
-{
+std::vector<int> Merge_of_two_vectors(const std::vector<int>& a, const std::vector<int>& b) {
     std::vector<int> res;
 
     int size_a = a.size();
@@ -104,8 +99,7 @@ std::vector<int> Merge_of_two_vectors(const std::vector<int>& a, const std::vect
     return res;
 }
 
-std::vector<int> Shell_with_merge(const std::vector<int>& a, int n, int size)
-{
+std::vector<int> Shell_with_merge(const std::vector<int>& a, int n, int size) {
     std::vector<int> res;
 
     std::vector<std::vector<int>> vec = division(a, n);
@@ -118,8 +112,7 @@ std::vector<int> Shell_with_merge(const std::vector<int>& a, int n, int size)
     return res;
 }
 
-std::vector<int> Shell_with_merge_tbb(const std::vector<int>& a, int n, int size)
-{
+std::vector<int> Shell_with_merge_tbb(const std::vector<int>& a, int n, int size) {
     std::vector<int> res;
 
     std::vector<std::vector<int>> vec = division(a, n);

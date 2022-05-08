@@ -1,7 +1,8 @@
 // Copyright 2022 Brazhnik Dmitry
 
-#ifndef MODULES_TASK_3_BRAZHNIK_D_SORT_SHELL_SIMPLE_MERGE_OMP_SHORT_SHELL_TBB_H_
-#define MODULES_TASK_3_BRAZHNIK_D_SORT_SHELL_SIMPLE_MERGE_OMP_SHORT_SHELL_TBB_H_
+#ifndef MODULES_TASK_3_BRAZHNIK_D_SORT_SHELL_SIMPLE_MERGE_TBB_SHELL_SORT_TBB_H_
+#define MODULES_TASK_3_BRAZHNIK_D_SORT_SHELL_SIMPLE_MERGE_TBB_SHELL_SORT_TBB_H_
+
 #include <utility>
 #include <vector>
 
@@ -13,4 +14,4 @@ std::vector<int> Merge_of_two_vectors(const std::vector<int>& a, const std::vect
 std::vector<int> Shell_with_merge(const std::vector<int>& a, int n, int size);
 std::vector<int> Shell_with_merge_tbb(const std::vector<int>& a, int n, int size);
 
-#endif // MODULES_TASK_3_BRAZHNIK_D_SORT_SHELL_SIMPLE_MERGE_OMP_SHORT_SHELL_TBB_H_
+#endif  // MODULES_TASK_3_BRAZHNIK_D_SORT_SHELL_SIMPLE_MERGE_TBB_SHELL_SORT_TBB_H_
