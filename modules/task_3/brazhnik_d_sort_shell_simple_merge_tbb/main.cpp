@@ -1,7 +1,6 @@
 // Copyright 2022 Brazhnik Dmitry
 
 #include "../../../modules/task_3/brazhnik_d_sort_shell_simple_merge_tbb/shell_sort_tbb.h"
-#include <gtest/gtest.h>
 
 TEST(Sort_Shell_Seq, Test_1_Random_Shell) {
     std::vector<int> vec = getRandom(10);
