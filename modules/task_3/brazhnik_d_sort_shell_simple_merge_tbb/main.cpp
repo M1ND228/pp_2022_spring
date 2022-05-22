@@ -24,7 +24,6 @@ TEST(Sort_Shell_Seq, Test_2_Merge_Of_Two_Vectors) {
 TEST(Sort_Shell_Seq, Test_3_Random_Merge_Of_Two_Vectors) {
     std::vector<int> vec1 = getRandom(5, 2);
     std::vector<int> vec2 = getRandom(10, 5);
-
     std::vector<int> res1 = SortShell(vec1, 5);
     std::vector<int> res2 = SortShell(vec2, 10);
     std::cout << std::endl;
